@@ -1,0 +1,15 @@
+import React from 'react';
+import Nice from '../assets/videos/Revenue-App-(Dribbble-shot).gif';
+
+const Video = () => {
+
+    return (
+      <video controls width="100%">
+        <source src={Nice} type="video/mp4"
+        />
+        Sorry, your browser doesn't support videos.
+      </video>
+    );
+  };
+  
+  export default Video;
