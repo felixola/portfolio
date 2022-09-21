@@ -14,10 +14,11 @@ import {
  import { ThemeProvider } from '@mui/material';
  import Theme from '../ThemeCustom';
  import { styled } from '@mui/material/styles';
- import { useState } from 'react';
+import { useState } from 'react';
  import Logo from '../../assets/svgs/Logo.svg';
  import './Header.css';
  import celebration from '../../assets/images/icons8-celebration-64.png';
+ import { Link } from 'react-router-dom';
 
 
  const MainTabs = styled(Tab)({
@@ -26,8 +27,8 @@ import {
     fontSize: '18px',
     fontWeight: 500,
     color: '#000000',
-    '& .MuiTabs-indicator': {
-      backgroundColor: '#1890ff',
+    '&.MuiTabs-indicator': {
+      backgroundColor: '#000000',
     },
   });
 
@@ -39,9 +40,6 @@ import {
     textAlign: 'center',
     color: '#FFFFFF',
     fontWeight: 500,
-    '& .MuiTabs-indicator': {
-      backgroundColor: '#1890ff',
-    },
   });
 
 
@@ -53,14 +51,15 @@ const Header = () => {
     const isMatch = useMediaQuery(theme.breakpoints.down("md"));
     console.log(isMatch);
 
+    const routes = [ "/home", "/explore", "/profile", "/chat", "/latest"];
 
     return (
 
         <ThemeProvider theme={Theme}>
-
+          {/* Alert Icon */}
              <Alert icon={false} severity="success" sx={{ color: '#000000',}}> 
-            R-dodgeQ(info) — Contact before sending contract description!
-            <img src={celebration} alt='celebration'className='celebration' />
+                R-dodgeQ(info) — Contact before sending contract description!
+                <img src={celebration} alt='celebration'className='celebration' />
             </Alert>
 
             <AppBar position='static' sx={{backgroundColor: '#FFFFFF', marginTop: '-0.5rem', width: '100%'}} elevation={0} className='appbar'>
@@ -68,18 +67,17 @@ const Header = () => {
                     <Toolbar>
                     
                             {/* Logo */}
-                        <img src={Logo} alt='logo' className='logo'/>
+                        <Link to='/'> <img src={Logo} alt='logo' className='logo'/> </Link>
 
                         <Box sx={{width: '100%', display: 'flex', justifyContent: 'center',}}>
 
-                            <Tabs value={value}
-                                  onChange={(e, value) => setValue(value)}>
-
-                                <MainTabs label='Home'/>
-                                <MainTabs label='Explore'/>
-                                <MainTabs label='Profile'/>
-                                <MainTabs label='Chat'/>
-                                <MainTabs label='Latest '/>
+                            <Tabs value={value} onChange={(e, value) => setValue(value)} centered  aria-label="navbar tabs">  
+                            
+                                <MainTabs label='Home' component={Link} to="/"/> 
+                                <MainTabs label='Explore' component={Link} to={routes[1]}/>
+                                <MainTabs label='Profile' component={Link} to={routes[2]}/>
+                                <MainTabs label='Chat'component={Link} to={routes[3]}/>
+                                <MainTabs label='Latest 'component={Link} to={routes[4]}/>
 
                             </Tabs>
 
@@ -92,9 +90,9 @@ const Header = () => {
                         </Stack>
            
                      </Toolbar>
+                     
+            </AppBar>         
 
-            </AppBar>
-        
         </ThemeProvider>
     );
 }

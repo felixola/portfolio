@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../../components/Header/Header';
+// import Header from '../../components/Header/Header';
 import { 
   Box, 
   Grid, 
@@ -11,7 +11,7 @@ import {
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../../components/ThemeCustom';
 import { styled } from '@mui/material/styles';
-import portrait from '../../assets/images/Text-messages-[remix].gif';
+import portrait from '../../assets/images/aiony-haust-3TLl_97HNJo-unsplash.jpg';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Accord from '../../components/UI/AccordionStuff';
 import smileys from '../../assets/images/icons8-smile-64.png';
@@ -67,12 +67,6 @@ const Home = () => {
 
     <ThemeProvider theme={theme}>
 
-
-        <Header />
-
-        <Divider />
-       
-
         <Box sx={{ backgroundColor: '#FFFFFF'}}>
 
           <Grid container>
@@ -114,7 +108,7 @@ const Home = () => {
 
             <Grid item md={6} align='center'>
          
-              <img src={portrait} alt='portrait' style={{height: '350px', borderRadius: '20px', marginTop: '40px'}}/>
+              <img src={portrait} alt='portrait' style={{height: '400px', borderRadius: '20px', marginTop: '40px'}}/>
 
             </Grid>
           </Grid>

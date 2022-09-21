@@ -13,3 +13,6 @@ const Video = () => {
   };
   
   export default Video;
+
+
+    {/* history.location.pathname !== "/" ? history.location.pathname : false */}
