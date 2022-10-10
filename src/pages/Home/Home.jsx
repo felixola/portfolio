@@ -11,7 +11,7 @@ import {
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../../components/ThemeCustom';
 import { styled } from '@mui/material/styles';
-import portrait from '../../assets/images/aiony-haust-3TLl_97HNJo-unsplash.jpg';
+import portrait from '../../assets/images/imagee.png';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Accord from '../../components/UI/AccordionStuff';
 import smileys from '../../assets/images/icons8-smile-64.png';
@@ -75,15 +75,12 @@ const Home = () => {
 
               <Stack spacing={2} direction='column' px='80px'>
 
-                <Typography mt='90px' variant='h5'> Hi, I'm <br /> <span style={{fontSize:'50px', lineHeight: '70px', fontWeight: 800}}>Mobolaku Felix</span> <br />
-                A Full stack web developer
+                <Typography mt='90px' variant='h5'> Hi, I'm <br /> <span style={{fontSize:'50px', lineHeight: '70px', fontWeight: 800}}>Mobolaku Felix</span> 
                  </Typography>
 
-                <Typography align='left' sx={{ marginTop: '20px !important'}}>Contrary to popular belief, 
-                  Lorem Ipsum is not simply  <br /> random text.  
-                  It has roots in a piece of classical   
-                  Latin  <br /> literature from 45 BC,  
-                  making it over 2000 years old.</Typography>
+                <Typography align='left' sx={{ marginTop: '20px !important'}}>I'm a Fullstack web developer and UI/UX designer <br />
+                I enjoy creating user-friendly and responsive websites
+                 </Typography>
 
                   <Stack direction='row' spacing={2}>
 
@@ -108,7 +105,7 @@ const Home = () => {
 
             <Grid item md={6} align='center'>
          
-              <img src={portrait} alt='portrait' style={{height: '400px', borderRadius: '20px', marginTop: '40px'}}/>
+              <img src={portrait} alt='portrait' style={{height: '450px', borderRadius: '20px', marginTop: '-70px'}}/>
 
             </Grid>
           </Grid>
@@ -148,22 +145,22 @@ const Home = () => {
 
            <Grid item md={6} align='center'>
              <Box width='450px' height='400px' border='1px solid #EEF2E6' borderRadius='10px'>
-               <Typography align='center' variant='h5' fontWeight='800' mt='50px'>Personal Contact</Typography> 
+               <Typography align='center' variant='h5' fontWeight='800' mt='70px'>Personal Contact</Typography> 
                           
                           {/* Profilr Section */}
                <Stack direction='row' ml='50px'  mt='20px' spacing={4}>
                <Typography>Name:</Typography>
-               <Typography>Mobolaku Felix</Typography>
+               <Typography>Mobolaku Felix. O</Typography>
                </Stack>
 
-               <Stack direction='row' ml='50px'  mt='20px' spacing={4}>
-               <Typography>Town:</Typography>
-               <Typography>consectetur adipiscing elit. </Typography>
-               </Stack>
+               {/* <Stack direction='row' ml='50px'  mt='20px' spacing={4}>
+               <Typography>City:</Typography>
+               <Typography>Iyesi Ota, Ogun state </Typography>
+               </Stack> */}
 
                <Stack direction='row' ml='50px'  mt='20px' spacing={4}>
                <Typography>Email:</Typography>
-               <Typography ml='10px'> adipiscing@gmail.com</Typography>
+               <Typography ml='10px'> felixoyetayo@gmail.com</Typography>
                </Stack>
 
                <Stack direction='row' ml='50px'  mt='20px' spacing={4}>

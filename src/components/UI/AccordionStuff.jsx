@@ -26,12 +26,16 @@ const Accord = () => {
             id="panel1a-header"
             elevation={0}
           >
-            <Typography>Getting Settings</Typography>
+            <Typography>Profile</Typography>
           </AccordionSummary>
           <AccordionDetails elevation={0} boxShadow='none'>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              malesuada lacus ex, sit amet blandit leo lobortis eget.
+            I am a solution-driven web developer adept at contributing to highly collaborative
+work environment, finding solutions and determining customer satisfaction. Proven
+experience developing consumer-focused websites using HTML, CSS, JavaScript,
+ReactJS, Wordpress, Python, Django and PHP. Meeting highest standards for web
+design, user experience, best practices and speed. Designed and developed web
+applications across multiple APIs, third-party integrations and databases.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -43,12 +47,29 @@ const Accord = () => {
             aria-controls="panel2a-content"
             id="panel2a-header"
           >
-            <Typography>Users</Typography>
+            <Typography>Skills</Typography>
           </AccordionSummary>
           <AccordionDetails  elevation={0} boxShadow='none'>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              malesuada lacus ex, sit amet blandit leo lobortis eget.
+            <Typography align='left'>
+            <b>Frontend</b>: HTML, CSS, Javascript, Bootstrap,
+              React, Material-UI, SVGs <br />
+              <br />
+            <b>Backend</b>: 
+            Django, MySql
+            <br />
+            <br />
+            <b>Tools</b>: 
+              Git, VSC
+
+              <br />
+              <br />
+
+              <b>Ui/Ux design</b>: 
+              Figma
+              <br />
+              <br />
+             <b>Soft skills</b> 
+              Comminucation, Teamwork
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -61,12 +82,16 @@ const Accord = () => {
             aria-controls="panel2a-content"
             id="panel2a-header"
           >
-            <Typography>Advanced Settings</Typography>
+            <Typography>Education</Typography>
           </AccordionSummary>
           <AccordionDetails  elevation={0} boxShadow='none'>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              malesuada lacus ex, sit amet blandit leo lobortis eget.
+            <b>Bachelor of Science : Computer Science,</b>
+            Federal University of Agriculture, Abeokuta (FUNAAB) <br /> April 2018 –
+            present <br />
+            Alabata Street,
+            Abeokuta, Ogun
+            State, Nigeria
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -79,12 +104,11 @@ const Accord = () => {
             aria-controls="panel2a-content"
             id="panel2a-header"
           >
-            <Typography>Personal Data</Typography>
+            <Typography>Language</Typography>
           </AccordionSummary>
           <AccordionDetails  elevation={0} boxShadow='none'>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              malesuada lacus ex, sit amet blandit leo lobortis eget.
+            <Typography align='center'>
+              English
             </Typography>
           </AccordionDetails>
         </Accordion>

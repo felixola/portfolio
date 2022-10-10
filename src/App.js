@@ -20,14 +20,15 @@ function App() {
 
     <Divider />
 
-      <Routes>
+    <Home />
+      {/* <Routes>
         <Route path="/" element={<Home />} />
 
         {/* <Route path="/explore" element={<Explore />} /> */}
         {/* <Route path="/profile" element={<Profile />} />
         <Route path="/chat" element={<Chat />} />
-        <Route path="/latest" element={<Latest />} /> */}
-      </Routes>
+        <Route path="/latest" element={<Latest />} />
+      </Routes> */}
 
     </>  
 

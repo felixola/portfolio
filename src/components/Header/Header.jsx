@@ -69,7 +69,7 @@ const Header = () => {
                             {/* Logo */}
                         <Link to='/'> <img src={Logo} alt='logo' className='logo'/> </Link>
 
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'center',}}>
+                        {/* <Box sx={{width: '100%', display: 'flex', justifyContent: 'center',}}>
 
                             <Tabs value={value} onChange={(e, value) => setValue(value)} centered  aria-label="navbar tabs">  
                             
@@ -81,9 +81,9 @@ const Header = () => {
 
                             </Tabs>
 
-                        </Box>
+                        </Box> */}
 
-                        <Stack direction='row' spacing={2} sx={{textAlign: 'center', justifyContent: 'center', alignItems: 'center'}}>
+                        <Stack direction='row' spacing={2} sx={{textAlign: 'center', justifyContent: 'center', alignItems: 'center', marginLeft: 'auto'}}>
                                             
                         <HireMe variant='contained'>Hire Me</HireMe>
 
