@@ -5,6 +5,7 @@ import {
     Stack,
     Button,
     Alert,
+    Link,
  } from '@mui/material';
  import { ThemeProvider } from '@mui/material';
  import Theme from '../ThemeCustom';
@@ -12,7 +13,7 @@ import {
  import Logo from '../../assets/svgs/Logo.svg';
  import './Header.css';
  import celebration from '../../assets/images/icons8-celebration-64.png';
- import { Link } from 'react-router-dom';
+//  import { Link } from 'react-router-dom';
 
 
 //  const MainTabs = styled(Tab)({
@@ -34,6 +35,9 @@ import {
     textAlign: 'center',
     color: '#FFFFFF',
     fontWeight: 500,
+    '&:hover': {
+      backgroundColor: '#4525E3',
+    },
   });
 
 
@@ -66,8 +70,9 @@ const Header = () => {
                       
 
                         <Stack direction='row' spacing={2} sx={{textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: 'auto'}}>
-                                            
-                        <HireMe variant='contained'>Hire Me</HireMe>
+
+                                         <Link href=' https://www.fiverr.com/felix_olamide' color='inherit'  underline="none" ><HireMe variant='contained'>Hire Me</HireMe></Link>   
+                       
 
                         </Stack>
            

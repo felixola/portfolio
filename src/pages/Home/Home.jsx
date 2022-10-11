@@ -6,7 +6,9 @@ import {
   Typography, 
   Button, 
   Stack,
+  TextField,
   Divider,
+  Link,
 } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../../components/ThemeCustom';
@@ -30,13 +32,14 @@ const HireMe = styled(Button)({
   color: '#FFFFFF',
   fontWeight: 500,
   textTransform: 'none',
-  '& .MuiTabs-indicator': {
-    backgroundColor: '#1890ff',
+  '&:hover': {
+    backgroundColor: '#4525E3',
   },
 });
 
 const SendMsg = styled(Button)({
-  width: '150px',
+  width: '300px',
+  borderRadius: '20px',
   boxShadow: 'none',
   backgroundColor: '#6246EA',
   border: 'none',
@@ -44,8 +47,8 @@ const SendMsg = styled(Button)({
   color: '#FFFFFF',
   fontWeight: 500,
   textTransform: 'none',
-  '& .MuiTabs-indicator': {
-    backgroundColor: '#1890ff',
+  '&:hover': {
+    backgroundColor: '#4525E3',
   },
 });
 
@@ -58,6 +61,16 @@ const DownloadCv = styled(Button)({
   color: '#FFFFFF',
   fontWeight: 500,
   textTransform: 'none',
+  '&:hover': {
+    backgroundColor: '#4525E3',
+  },
+});
+
+
+const CustomTextField = styled(TextField)({
+  '&:focus': {
+    borderColor: '#000000',
+  },
 });
 
 
@@ -84,7 +97,7 @@ const Home = () => {
 
                   <Stack direction='row' spacing={2} sx={{display: 'flex',justifyContent: {xs: 'center', md: 'left'}, alignItems: 'center', }}>
 
-                  <HireMe variant='contained'>Hire Me</HireMe>
+                  <Link href=' https://www.fiverr.com/felix_olamide' color='inherit'  underline="none" ><HireMe variant='contained'>Hire Me</HireMe></Link> 
 
                   <Button variant='text'  sx={{
                           color: '#D36B00', 
@@ -92,7 +105,7 @@ const Home = () => {
                           fontWeight: 700,
                           fontSize: '15px', 
                           textTransform: 'none',
-                          }}>Connect</Button>
+                          }} href='https://www.linkedin.com/in/mobolaku-felix-2a0907244'>Connect</Button>
                   
                   </Stack>
                 
@@ -120,7 +133,7 @@ const Home = () => {
 
          <Typography align='center' variant='h4' fontWeight='800'>Specializations</Typography>
          <Typography align='center' variant='subtitle1' >
-           Html, Css, Javascript, Reactjs, Python, Django, Node.
+           Html, Css, Javascript, Reactjs, Python, Django, PHP and MySql
          </Typography>
          <Typography align='center' variant='subtitle1' >
           Delivering the best designs for your site <img src={smileys} alt='smileys' className='smiley' />
@@ -141,16 +154,23 @@ const Home = () => {
 
            </Grid>
 
+
+               {/* Download CV */}
+       <Box width='100%' mt='50px' align='center' sx={{ display: {xs: 'flex', md: 'none'}, justifyContent: 'center'}}>
+       <DownloadCv variant='outlined' endIcon={<DownloadIcon />}>Download CV</DownloadCv>
+       </Box>
+
            {/* Address and info */}
 
            <Grid item md={6} xs={12} align='center'>
-             <Box height='400px' border='1px solid #EEF2E6' borderRadius='10px' sx={{ width: {xs: '394px', md: '450px'}, marginTop: {xs: '80px', md: 'none'}}}>
-               <Typography align='center' variant='h5' fontWeight='800' mt='70px'>Personal Contact</Typography> 
+             <Box height='500px' border='1px solid #EEF2E6' borderRadius='5px' sx={{ width: {xs: '364px', md: '450px'}, marginTop: {xs: '80px', md: '0px'}}}>
+               <Typography align='center' variant='h5' fontWeight='800' mt='70px'>Contact</Typography> 
                           
                           {/* Profile Section */}
-               <Stack direction='row' ml='50px'  mt='20px' spacing={4}>
+               <Stack direction='row' ml='15px'  mt='20px' spacing={3}>
                <Typography>Name:</Typography>
-               <Typography>Mobolaku Felix. O</Typography>
+               <CustomTextField id="standard-basic" variant="outlined" sx={{ width: {xs: "230px", md: '300px'}}} />
+
                </Stack>
 
                {/* <Stack direction='row' ml='50px'  mt='20px' spacing={4}>
@@ -158,14 +178,21 @@ const Home = () => {
                <Typography>Iyesi Ota, Ogun state </Typography>
                </Stack> */}
 
-               <Stack direction='row' ml='50px'  mt='20px' spacing={4}>
+               <Stack direction='row' ml='20px'  mt='20px' spacing={3}>
                <Typography>Email:</Typography>
-               <Typography ml='10px'> felixoyetayo@gmail.com</Typography>
+               <CustomTextField id="standard-basic"  variant="outlined" sx={{ width: {xs: "230px", md: '300px'}}} />
                </Stack>
 
-               <Stack direction='row' ml='50px'  mt='20px' spacing={4}>
-               <Typography>Team:</Typography>
-               <Typography ml='10px'> R-dodgeQ Team</Typography>
+               <Stack direction='row' ml='15px'  mt='20px' spacing={2}>
+               <Typography>Details:</Typography>
+               <CustomTextField
+                    id="outlined-multiline-static"
+                    
+                    multiline
+                    rows={4}
+                    // defaultValue="Default Value"
+                    sx={{ width: {xs: "230px", md: '300px'}}}
+                  />
                </Stack>
                           {/* Send Message button */}
                <SendMsg variant='contained' sx={{ marginTop: '40px'}}>Send Message</SendMsg>
@@ -177,7 +204,7 @@ const Home = () => {
 
 
             {/* Download CV */}
-       <Box width='100%' mt='50px' align='center' sx={{ display: 'flex', justifyContent: 'center'}}>
+       <Box width='100%' mt='50px' align='center' sx={{ display: {md: 'flex', xs: 'none'}, justifyContent: 'center'}}>
        <DownloadCv variant='outlined' endIcon={<DownloadIcon />}>Download CV</DownloadCv>
        </Box>
 

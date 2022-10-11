@@ -68,7 +68,7 @@ const Accord = () => {
               Figma
               <br />
               <br />
-             <b>Soft skills</b> 
+             <b>Soft skills</b>:  
               Comminucation, Teamwork
             </Typography>
           </AccordionDetails>
