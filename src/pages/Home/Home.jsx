@@ -12,7 +12,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from '../../components/ThemeCustom';
 import { styled } from '@mui/material/styles';
 import portrait from '../../assets/images/imagee.png';
-import GitHubIcon from '@mui/icons-material/GitHub';
+// import GitHubIcon from '@mui/icons-material/GitHub';
 import Accord from '../../components/UI/AccordionStuff';
 import smileys from '../../assets/images/icons8-smile-64.png';
 import './Home.css';
@@ -22,10 +22,10 @@ import Footer from '../../components/Footer/Footer';
 
 
 const HireMe = styled(Button)({
-  border: '1px solid #25316D',
   width: '100px',
   boxShadow: 'none',
-  backgroundColor: '#354259',
+  backgroundColor: '#6246EA',
+  border: 'none',
   textAlign: 'center',
   color: '#FFFFFF',
   fontWeight: 500,
@@ -36,10 +36,10 @@ const HireMe = styled(Button)({
 });
 
 const SendMsg = styled(Button)({
-  border: '1px solid #25316D',
   width: '150px',
   boxShadow: 'none',
-  backgroundColor: '#25316D',
+  backgroundColor: '#6246EA',
+  border: 'none',
   textAlign: 'center',
   color: '#FFFFFF',
   fontWeight: 500,
@@ -50,10 +50,10 @@ const SendMsg = styled(Button)({
 });
 
 const DownloadCv = styled(Button)({
-  border: '1px solid #25316D',
   width: '150px',
   boxShadow: 'none',
-  backgroundColor: '#151F28',
+  backgroundColor: '#6246EA',
+  border: 'none',
   textAlign: 'center',
   color: '#FFFFFF',
   fontWeight: 500,
@@ -71,18 +71,18 @@ const Home = () => {
 
           <Grid container>
 
-            <Grid item md={6}>
+            <Grid item md={6} xs={12}>
 
-              <Stack spacing={2} direction='column' px='80px'>
+              <Stack spacing={2} direction='column' sx={{paddingLeft: {xs: 'none', md: '80px'}}}>
 
-                <Typography mt='90px' variant='h5'> Hi, I'm <br /> <span style={{fontSize:'50px', lineHeight: '70px', fontWeight: 800}}>Mobolaku Felix</span> 
+                <Typography mt='90px' variant='h5'sx={{textAlign: {xs: 'center', md: 'left'}}}> Hi, I'm <br /> <span style={{fontSize:'50px', lineHeight: '70px', fontWeight: 800}}>Mobolaku Felix</span> 
                  </Typography>
 
-                <Typography align='left' sx={{ marginTop: '20px !important'}}>I'm a Fullstack web developer and UI/UX designer <br />
-                I enjoy creating user-friendly and responsive websites
+                <Typography sx={{ marginTop: '20px !important', textAlign: {xs: 'center', md: 'left'}}}>I'm a Fullstack web developer and UI/UX designer <br />
+                          I enjoy creating user-friendly and responsive websites
                  </Typography>
 
-                  <Stack direction='row' spacing={2}>
+                  <Stack direction='row' spacing={2} sx={{display: 'flex',justifyContent: {xs: 'center', md: 'left'}, alignItems: 'center', }}>
 
                   <HireMe variant='contained'>Hire Me</HireMe>
 
@@ -96,16 +96,16 @@ const Home = () => {
                   
                   </Stack>
                 
-                  <GitHubIcon />
+                  {/* <GitHubIcon /> */}
 
-                </Stack>
+                          </Stack>
 
             </Grid>
 
 
-            <Grid item md={6} align='center'>
+            <Grid item md={6} xs={12}align='center'>
          
-              <img src={portrait} alt='portrait' style={{height: '450px', borderRadius: '20px', marginTop: '-70px'}}/>
+              <img src={portrait} alt='portrait' style={{height: '400px', borderRadius: '20px', marginTop: '-70px', }}/>
 
             </Grid>
           </Grid>
@@ -135,7 +135,7 @@ const Home = () => {
 
          <Grid container>
 
-           <Grid item md={6} align='center'> 
+           <Grid item md={6} xs={12} align='center'> 
 
            <Accord />
 
@@ -143,11 +143,11 @@ const Home = () => {
 
            {/* Address and info */}
 
-           <Grid item md={6} align='center'>
-             <Box width='450px' height='400px' border='1px solid #EEF2E6' borderRadius='10px'>
+           <Grid item md={6} xs={12} align='center'>
+             <Box height='400px' border='1px solid #EEF2E6' borderRadius='10px' sx={{ width: {xs: '394px', md: '450px'}, marginTop: {xs: '80px', md: 'none'}}}>
                <Typography align='center' variant='h5' fontWeight='800' mt='70px'>Personal Contact</Typography> 
                           
-                          {/* Profilr Section */}
+                          {/* Profile Section */}
                <Stack direction='row' ml='50px'  mt='20px' spacing={4}>
                <Typography>Name:</Typography>
                <Typography>Mobolaku Felix. O</Typography>

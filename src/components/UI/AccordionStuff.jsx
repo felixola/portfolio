@@ -18,7 +18,7 @@ const Accord = () => {
  
 
     return (
-        <div style={{border: '1px solid #EEF2E6', width: '420px'}}>
+        <div style={{border: '1px solid #EEF2E6', width: {md: '450px', xs: '394px'}}}>
         <Accordion sx={{boxShadow:'0',}} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -30,12 +30,12 @@ const Accord = () => {
           </AccordionSummary>
           <AccordionDetails elevation={0} boxShadow='none'>
             <Typography>
-            I am a solution-driven web developer adept at contributing to highly collaborative
-work environment, finding solutions and determining customer satisfaction. Proven
-experience developing consumer-focused websites using HTML, CSS, JavaScript,
-ReactJS, Wordpress, Python, Django and PHP. Meeting highest standards for web
-design, user experience, best practices and speed. Designed and developed web
-applications across multiple APIs, third-party integrations and databases.
+                            I am a solution-driven web developer adept at contributing to highly collaborative
+                work environment, finding solutions and determining customer satisfaction. Proven
+                experience developing consumer-focused websites using HTML, CSS, JavaScript,
+                ReactJS, Wordpress, Python, Django and PHP. Meeting highest standards for web
+                design, user experience, best practices and speed. Designed and developed web
+                applications across multiple APIs, third-party integrations and databases.
             </Typography>
           </AccordionDetails>
         </Accordion>

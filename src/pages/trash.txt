@@ -16,3 +16,20 @@ const Video = () => {
 
 
     {/* history.location.pathname !== "/" ? history.location.pathname : false */}
+
+
+
+
+      {/* <Box sx={{width: '100%', display: 'flex', justifyContent: 'center',}}>
+
+                            <Tabs value={value} onChange={(e, value) => setValue(value)} centered  aria-label="navbar tabs">  
+                            
+                                <MainTabs label='Home' component={Link} to="/"/> 
+                                <MainTabs label='Explore' component={Link} to={routes[1]}/>
+                                <MainTabs label='Profile' component={Link} to={routes[2]}/>
+                                <MainTabs label='Chat'component={Link} to={routes[3]}/>
+                                <MainTabs label='Latest 'component={Link} to={routes[4]}/>
+
+                            </Tabs>
+
+                        </Box> */}
