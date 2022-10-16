@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.fea06451.css",
-    "main.js": "/portfolio/static/js/main.49b863a0.js",
+    "main.css": "/portfolio/static/css/main.89be2f6a.css",
+    "main.js": "/portfolio/static/js/main.304019d1.js",
+    "static/media/Mobolaku_Felix_CV.pdf": "/portfolio/static/media/Mobolaku_Felix_CV.b9f4d1c51662a55e1ae6.pdf",
     "static/media/imagee.png": "/portfolio/static/media/imagee.b8e988d110e642f5efbd.png",
     "static/media/Logo.svg": "/portfolio/static/media/Logo.23c5c0cfbbdd843eb4fa05d53148debb.svg",
     "index.html": "/portfolio/index.html",
-    "main.fea06451.css.map": "/portfolio/static/css/main.fea06451.css.map",
-    "main.49b863a0.js.map": "/portfolio/static/js/main.49b863a0.js.map"
+    "main.89be2f6a.css.map": "/portfolio/static/css/main.89be2f6a.css.map",
+    "main.304019d1.js.map": "/portfolio/static/js/main.304019d1.js.map"
   },
   "entrypoints": [
-    "static/css/main.fea06451.css",
-    "static/js/main.49b863a0.js"
+    "static/css/main.89be2f6a.css",
+    "static/js/main.304019d1.js"
   ]
 }
