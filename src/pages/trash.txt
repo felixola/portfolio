@@ -33,3 +33,66 @@ const Video = () => {
                             </Tabs>
 
                         </Box> */}
+
+
+
+                         // Function will execute on click of button
+   const onButtonClick = () => {
+    // using Java Script method to get PDF file
+    fetch('Mobolaku_Felix_CV.pdf').then(response => {
+        response.blob().then(blob => {
+            // Creating new object of PDF file
+            const fileURL = window.URL.createObjectURL(blob);
+            // Setting various property values
+            let alink = document.createElement('a');
+            alink.href = fileURL;
+            alink.download = 'Mobolaku_Felix_CV.pdf';
+            alink.click();
+        })
+    })
+}
+
+
+
+ const onDownload = () => {
+    const link = document.createElement("a");
+    link.download = `Mobolaku_Felix_CV.pdf`;
+    link.href = "./Mobolaku_Felix_CV.pdf";
+    link.click();
+  };
+
+
+
+
+ <Typography align='center' variant='h5' fontWeight='800' mt='70px'>Contact</Typography> 
+                          
+                          {/* Profile Section */}
+               <Stack direction='row' ml='15px'  mt='20px' spacing={3}>
+               <Typography>Name:</Typography>
+               <CustomTextField id="standard-basic" variant="outlined" sx={{ width: {xs: "230px", md: '300px'}}} />
+
+               </Stack>
+
+               {/* <Stack direction='row' ml='50px'  mt='20px' spacing={4}>
+               <Typography>City:</Typography>
+               <Typography>Iyesi Ota, Ogun state </Typography>
+               </Stack> */}
+
+               <Stack direction='row' ml='20px'  mt='20px' spacing={3}>
+               <Typography>Email:</Typography>
+               <CustomTextField id="standard-basic"  variant="outlined" sx={{ width: {xs: "230px", md: '300px'}}} />
+               </Stack>
+
+               <Stack direction='row' ml='15px'  mt='20px' spacing={2}>
+               <Typography>Details:</Typography>
+               <CustomTextField
+                    id="outlined-multiline-static"
+                    
+                    multiline
+                    rows={4}
+                    // defaultValue="Default Value"
+                    sx={{ width: {xs: "230px", md: '300px'}}}
+                  />
+               </Stack>
+                          {/* Send Message button */}
+               <SendMsg variant='contained' sx={{ marginTop: '40px'}}>Send Message</SendMsg>

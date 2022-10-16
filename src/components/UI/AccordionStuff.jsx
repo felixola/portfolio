@@ -4,6 +4,7 @@ import {
     Accordion,
     AccordionSummary,
     AccordionDetails,
+    Box,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
@@ -18,7 +19,7 @@ const Accord = () => {
  
 
     return (
-        <div style={{border: '1px solid #EEF2E6', width: {md: '450px', xs: '394px'}}}>
+        <Box sx={{border: '1px solid #EEF2E6', width: {xs: '350px', md: '600px'}}}>
         <Accordion sx={{boxShadow:'0',}} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -87,7 +88,7 @@ const Accord = () => {
           <AccordionDetails  elevation={0} boxShadow='none'>
             <Typography>
             <b>Bachelor of Science : Computer Science,</b>
-            Federal University of Agriculture, Abeokuta (FUNAAB) <br /> April 2018 –
+            Federal University of Agriculture, Abeokuta (FUNAAB) <br /> April 2019 –
             present <br />
             Alabata Street,
             Abeokuta, Ogun
@@ -112,7 +113,7 @@ const Accord = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-      </div>
+      </Box>
     );
 }
 

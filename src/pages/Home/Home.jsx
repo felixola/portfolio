@@ -6,7 +6,6 @@ import {
   Typography, 
   Button, 
   Stack,
-  TextField,
   Divider,
   Link,
 } from '@mui/material';
@@ -20,7 +19,8 @@ import smileys from '../../assets/images/icons8-smile-64.png';
 import './Home.css';
 import DownloadIcon from '@mui/icons-material/Download';
 import Footer from '../../components/Footer/Footer';
-
+import myDownload from '../../pdf/Mobolaku_Felix_CV.pdf';
+import ContactForm from '../../components/Contact/Contact';
 
 
 const HireMe = styled(Button)({
@@ -37,20 +37,6 @@ const HireMe = styled(Button)({
   },
 });
 
-const SendMsg = styled(Button)({
-  width: '300px',
-  borderRadius: '20px',
-  boxShadow: 'none',
-  backgroundColor: '#6246EA',
-  border: 'none',
-  textAlign: 'center',
-  color: '#FFFFFF',
-  fontWeight: 500,
-  textTransform: 'none',
-  '&:hover': {
-    backgroundColor: '#4525E3',
-  },
-});
 
 const DownloadCv = styled(Button)({
   width: '150px',
@@ -63,19 +49,23 @@ const DownloadCv = styled(Button)({
   textTransform: 'none',
   '&:hover': {
     backgroundColor: '#4525E3',
+    width: '150px',
+    border: 'none'
   },
 });
 
 
-const CustomTextField = styled(TextField)({
-  '&:focus': {
-    borderColor: '#000000',
-  },
-});
+// const CustomTextField = styled(TextField)({
+//   '&:focus': {
+//     borderColor: 'grey',
+//   },
+// });
 
 
 const Home = () => {
 
+ 
+  
   return (
 
     <ThemeProvider theme={theme}>
@@ -150,69 +140,47 @@ const Home = () => {
 
            <Grid item md={6} xs={12} align='center'> 
 
-           <Accord />
+           <Accord/>
 
            </Grid>
 
 
                {/* Download CV */}
        <Box width='100%' mt='50px' align='center' sx={{ display: {xs: 'flex', md: 'none'}, justifyContent: 'center'}}>
-       <DownloadCv variant='outlined' endIcon={<DownloadIcon />}>Download CV</DownloadCv>
+
+         
+         <DownloadCv component={Link} href={myDownload} download='Mobolaku_Felix_CV.pdf' variant='outlined' endIcon={<DownloadIcon />}>
+           Download CV
+          </DownloadCv> 
+       
        </Box>
 
-           {/* Address and info */}
+           {/* Contact */}
 
            <Grid item md={6} xs={12} align='center'>
-             <Box height='500px' border='1px solid #EEF2E6' borderRadius='5px' sx={{ width: {xs: '364px', md: '450px'}, marginTop: {xs: '80px', md: '0px'}}}>
-               <Typography align='center' variant='h5' fontWeight='800' mt='70px'>Contact</Typography> 
-                          
-                          {/* Profile Section */}
-               <Stack direction='row' ml='15px'  mt='20px' spacing={3}>
-               <Typography>Name:</Typography>
-               <CustomTextField id="standard-basic" variant="outlined" sx={{ width: {xs: "230px", md: '300px'}}} />
-
-               </Stack>
-
-               {/* <Stack direction='row' ml='50px'  mt='20px' spacing={4}>
-               <Typography>City:</Typography>
-               <Typography>Iyesi Ota, Ogun state </Typography>
-               </Stack> */}
-
-               <Stack direction='row' ml='20px'  mt='20px' spacing={3}>
-               <Typography>Email:</Typography>
-               <CustomTextField id="standard-basic"  variant="outlined" sx={{ width: {xs: "230px", md: '300px'}}} />
-               </Stack>
-
-               <Stack direction='row' ml='15px'  mt='20px' spacing={2}>
-               <Typography>Details:</Typography>
-               <CustomTextField
-                    id="outlined-multiline-static"
-                    
-                    multiline
-                    rows={4}
-                    // defaultValue="Default Value"
-                    sx={{ width: {xs: "230px", md: '300px'}}}
-                  />
-               </Stack>
-                          {/* Send Message button */}
-               <SendMsg variant='contained' sx={{ marginTop: '40px'}}>Send Message</SendMsg>
-             </Box>
+             <Box height='500px' border='1px solid #EEF2E6' borderRadius='1px' sx={{ width: {xs: '350px', md: '450px'}, marginTop: {xs: '80px', md: '0px'}}}>
+               <ContactForm />
+              </Box>
 
            </Grid>
          </Grid>   
        </Box>
 
+      
+
 
             {/* Download CV */}
        <Box width='100%' mt='50px' align='center' sx={{ display: {md: 'flex', xs: 'none'}, justifyContent: 'center'}}>
-       <DownloadCv variant='outlined' endIcon={<DownloadIcon />}>Download CV</DownloadCv>
+       <DownloadCv component={Link} href={myDownload} download='Mobolaku_Felix_CV.pdf' variant='outlined' endIcon={<DownloadIcon />}>
+           Download CV
+          </DownloadCv> 
        </Box>
 
 
        <Divider  sx={{marginTop: '50px'}}/>
 
        {/* Footer */}
-       <Footer />
+       <Footer/>
 
     </ThemeProvider >
   )
